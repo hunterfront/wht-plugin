@@ -10,7 +10,10 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]_[contenthash:8].js'
+    filename: '[name].js',
+    libraryTarget: 'umd',
+    library: 'wht-plugin',
+    globalObject: 'this'
   },
   watchOptions: {
     // 不监听的 node_modules 目录下的文件
@@ -20,6 +23,5 @@ module.exports = {
   },
   plugins: [
     new WhtPlugin()
-  ],
-  devtool: false
+  ]
 };
