@@ -8,10 +8,11 @@
       "type": "pwa-node",
       "request": "launch",
       "name": "debug webpack",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}\\node_modules\\webpack\\bin\\webpack.js"
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "node",
+      // "runtimeArgs": ["--config", "webpack.config.js", "--stats", "verbose"],
+      "program": "${workspaceFolder}\\node_modules\\webpack\\bin\\webpack.js",
+      "args": ["--config", "webpack.config.js", "--stats", "verbose"]
     }
   ]
 }
